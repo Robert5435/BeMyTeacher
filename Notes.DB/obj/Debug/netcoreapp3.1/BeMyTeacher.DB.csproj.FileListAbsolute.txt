@@ -1,0 +1,12 @@
+D:\Ubuntu\Projects\notes.webapi\Notes.DB\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.deps.json
+D:\Ubuntu\Projects\notes.webapi\Notes.DB\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.runtimeconfig.json
+D:\Ubuntu\Projects\notes.webapi\Notes.DB\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.runtimeconfig.dev.json
+D:\Ubuntu\Projects\notes.webapi\Notes.DB\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.dll
+D:\Ubuntu\Projects\notes.webapi\Notes.DB\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.pdb
+D:\Ubuntu\Projects\notes.webapi\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.csproj.AssemblyReference.cache
+D:\Ubuntu\Projects\notes.webapi\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.AssemblyInfoInputs.cache
+D:\Ubuntu\Projects\notes.webapi\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.AssemblyInfo.cs
+D:\Ubuntu\Projects\notes.webapi\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.csproj.CoreCompileInputs.cache
+D:\Ubuntu\Projects\notes.webapi\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.dll
+D:\Ubuntu\Projects\notes.webapi\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.pdb
+D:\Ubuntu\Projects\notes.webapi\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.genruntimeconfig.cache

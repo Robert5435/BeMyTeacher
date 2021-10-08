@@ -1,0 +1,12 @@
+D:\Ubuntu\Projects\notes.webapi\Notes.Core\bin\Debug\netcoreapp3.1\BeMyTeacher.Core.deps.json
+D:\Ubuntu\Projects\notes.webapi\Notes.Core\bin\Debug\netcoreapp3.1\BeMyTeacher.Core.dll
+D:\Ubuntu\Projects\notes.webapi\Notes.Core\bin\Debug\netcoreapp3.1\BeMyTeacher.Core.pdb
+D:\Ubuntu\Projects\notes.webapi\Notes.Core\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.dll
+D:\Ubuntu\Projects\notes.webapi\Notes.Core\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.pdb
+D:\Ubuntu\Projects\notes.webapi\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.csproj.AssemblyReference.cache
+D:\Ubuntu\Projects\notes.webapi\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.AssemblyInfoInputs.cache
+D:\Ubuntu\Projects\notes.webapi\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.AssemblyInfo.cs
+D:\Ubuntu\Projects\notes.webapi\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.csproj.CoreCompileInputs.cache
+D:\Ubuntu\Projects\notes.webapi\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.csproj.CopyComplete
+D:\Ubuntu\Projects\notes.webapi\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.dll
+D:\Ubuntu\Projects\notes.webapi\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.pdb
