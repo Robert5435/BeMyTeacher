@@ -29,11 +29,18 @@ namespace BeMyTeacher.WebApi.Controllers
             return Ok(_tutoringAdsServices.GetTutoringAd(id));
         }
 
+        //[HttpGet]
+        //public IActionResult GetTutoringAds()
+        //{
+        //    return Ok(_tutoringAdsServices.GetTutoringAds());
+        //}
+
         [HttpGet]
-        public IActionResult GetTutoringAds()
+        public IActionResult GetViewModelTutoringAds()
         {
-            return Ok(_tutoringAdsServices.GetTutoringAds());
+            return Ok(_tutoringAdsServices.GetViewModelTutoringAds());
         }
+
         [HttpPost]
         public IActionResult CreateTutoringAd(TutoringAd tutoringAd)
         {

@@ -12,6 +12,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using BeMyTeacher.Core;
 using BeMyTeacher.DB;
+using AutoMapper;
+using BeMyTeacher.DB.Mapper;
 
 namespace Notes.WebApi
 {
@@ -42,6 +44,16 @@ namespace Notes.WebApi
                         .AllowAnyMethod();
                 });
             });
+
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
