@@ -1,4 +1,6 @@
-﻿using BeMyTeacher.DB;
+﻿using AutoMapper;
+using BeMyTeacher.DB;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +11,12 @@ namespace BeMyTeacher.Core
     public class TutoringAdsServices : ITutoringAdsServices
     {
         private AppDbContext _context;
+        private readonly IMapper _mapper;
 
-        public TutoringAdsServices(AppDbContext context)
+        public TutoringAdsServices(AppDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         public TutoringAd GetTutoringAd(int id)
@@ -22,6 +26,19 @@ namespace BeMyTeacher.Core
         public List<TutoringAd> GetTutoringAds()
         {
             return _context.TutoringAds.ToList();
+        }
+
+        public List<ViewModelTutoringAd> GetViewModelTutoringAds()
+        {
+            var ads = _context.TutoringAds.Include(a => a.Calification).Include(a => a.Subject).Include(a => a.Location).Include(a => a.EducationLevel).ToList();
+            List<ViewModelTutoringAd> modelAds = new List<ViewModelTutoringAd>();
+            foreach(var ad in ads)
+            {
+                var adModel = _mapper.Map<ViewModelTutoringAd>(ad);
+                modelAds.Add(adModel);
+            }
+            Console.WriteLine(modelAds);
+            return modelAds.ToList();
         }
 
         public TutoringAd CreateTutoringAd(TutoringAd tutoringAd)
