@@ -14,6 +14,7 @@ using BeMyTeacher.Core;
 using BeMyTeacher.DB;
 using AutoMapper;
 using BeMyTeacher.DB.Mapper;
+using BeMyTeacher.WebApi.Helpers;
 
 namespace Notes.WebApi
 {
@@ -33,17 +34,11 @@ namespace Notes.WebApi
 
             services.AddDbContext<AppDbContext>();
             services.AddTransient<ITutoringAdsServices, TutoringAdsServices>();
+            services.AddTransient<ISubjectsServices, SubjectsServices>();
+            services.AddTransient<IUserRepository, UserServices>();
+            services.AddTransient<JwtService>();
 
-            services.AddCors(options =>
-            {
-                options.AddPolicy("BeMyTeacherPolicy",
-                builder =>
-                {
-                    builder.WithOrigins("*")
-                        .AllowAnyHeader()
-                        .AllowAnyMethod();
-                });
-            });
+            services.AddCors();
 
             var mapperConfig = new MapperConfiguration(mc =>
             {
@@ -68,7 +63,11 @@ namespace Notes.WebApi
 
             app.UseRouting();
 
-            app.UseCors("BeMyTeacherPolicy");
+            app.UseCors(options => options
+            .WithOrigins("http://localhost:3000")
+            .AllowCredentials()
+            .AllowAnyHeader()
+            .AllowAnyMethod());
 
             app.UseAuthorization();
 

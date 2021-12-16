@@ -1,12 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BeMyTeacher.Core;
+﻿using BeMyTeacher.Core;
 using BeMyTeacher.DB;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace BeMyTeacher.WebApi.Controllers
 {
@@ -36,14 +32,17 @@ namespace BeMyTeacher.WebApi.Controllers
         //}
 
         [HttpGet]
-        public IActionResult GetViewModelTutoringAds()
+        public IActionResult GetViewModelTutoringAds(int? selectedSubjectId = null, int? selectedLocationId = null)
         {
-            return Ok(_tutoringAdsServices.GetViewModelTutoringAds());
+            return Ok(_tutoringAdsServices.GetViewModelTutoringAds(selectedSubjectId, selectedLocationId));
         }
+
 
         [HttpPost]
         public IActionResult CreateTutoringAd(TutoringAd tutoringAd)
         {
+
+            tutoringAd.ExpirationDate = DateTime.Now;
             var newTutoringAd = _tutoringAdsServices.CreateTutoringAd(tutoringAd);
 
             return CreatedAtRoute("GetTutoringAd", new { newTutoringAd.Id }, newTutoringAd);

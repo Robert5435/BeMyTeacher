@@ -10,6 +10,6 @@ namespace BeMyTeacher.Core
         void DeleteTutoringAd(int id);
         void EditTutoringAd(TutoringAd tutoringAd);
         List<TutoringAd> GetTutoringAds();
-        List<ViewModelTutoringAd> GetViewModelTutoringAds();
+        List<ViewModelTutoringAd> GetViewModelTutoringAds( int? selectedSubjectId = null, int? selectedLocationId = null);
     }
 }

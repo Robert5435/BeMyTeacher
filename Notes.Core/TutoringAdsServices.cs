@@ -25,20 +25,31 @@ namespace BeMyTeacher.Core
         }
         public List<TutoringAd> GetTutoringAds()
         {
-            return _context.TutoringAds.ToList();
+            var ads = _context.TutoringAds.ToList();
+            ads = ads.OrderByDescending(a => a.ExpirationDate).ToList();
+            return ads;
         }
 
-        public List<ViewModelTutoringAd> GetViewModelTutoringAds()
+        public List<ViewModelTutoringAd> GetViewModelTutoringAds(int? selectedSubjectId = null, int? selectedLocationId = null)
         {
             var ads = _context.TutoringAds.Include(a => a.Calification).Include(a => a.Subject).Include(a => a.Location).Include(a => a.EducationLevel).ToList();
+            ads = ads.OrderByDescending(a => a.ExpirationDate).ToList();
+            if (selectedSubjectId.HasValue)
+            {
+                ads = ads.Where(a => a.SubjectId == selectedSubjectId).ToList();
+            }
+
+            if (selectedLocationId.HasValue)
+            {
+                ads = ads.Where(a => a.LocationId == selectedLocationId).ToList();
+            }
             List<ViewModelTutoringAd> modelAds = new List<ViewModelTutoringAd>();
             foreach(var ad in ads)
             {
                 var adModel = _mapper.Map<ViewModelTutoringAd>(ad);
                 modelAds.Add(adModel);
             }
-            Console.WriteLine(modelAds);
-            return modelAds.ToList();
+            return modelAds;
         }
 
         public TutoringAd CreateTutoringAd(TutoringAd tutoringAd)

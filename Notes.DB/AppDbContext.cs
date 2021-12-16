@@ -9,11 +9,14 @@ namespace BeMyTeacher.DB
         public DbSet<Calification> Califications { get; set; }
         public DbSet<EducationLevel> EducationLevels { get; set; }
         public DbSet<Location> Locations { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
                 optionsBuilder.UseSqlServer(
                     @"Server=DESKTOP-I4OJB76;Database=BeMyTeacherDB;Integrated Security=True");
             }
+
+        
     }
 }

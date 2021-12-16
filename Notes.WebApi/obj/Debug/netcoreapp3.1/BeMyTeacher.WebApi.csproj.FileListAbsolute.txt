@@ -63,3 +63,5 @@ D:\Ubuntu\Projects\notes.webapi\Notes.WebApi\obj\Debug\netcoreapp3.1\BeMyTeacher
 D:\Ubuntu\Projects\notes.webapi\Notes.WebApi\obj\Debug\netcoreapp3.1\BeMyTeacher.WebApi.dll
 D:\Ubuntu\Projects\notes.webapi\Notes.WebApi\obj\Debug\netcoreapp3.1\BeMyTeacher.WebApi.pdb
 D:\Ubuntu\Projects\notes.webapi\Notes.WebApi\obj\Debug\netcoreapp3.1\BeMyTeacher.WebApi.genruntimeconfig.cache
+D:\Ubuntu\Projects\notes.webapi\Notes.WebApi\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\Ubuntu\Projects\notes.webapi\Notes.WebApi\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
