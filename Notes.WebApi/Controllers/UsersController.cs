@@ -43,7 +43,9 @@ namespace BeMyTeacher.WebApi.Controllers
 
             Response.Cookies.Append("jwt", jwt, new CookieOptions
             {
-                HttpOnly = true
+                HttpOnly = true,
+                SameSite = SameSiteMode.None,
+                Secure = true
             });
 
             return Ok(new {message ="success" });
@@ -67,10 +69,14 @@ namespace BeMyTeacher.WebApi.Controllers
                 return Unauthorized(); 
             }
         }
-        [HttpPost(template:"logout")]
+        [HttpGet(template:"logout")]
         public IActionResult Logout()
         {
-            Response.Cookies.Delete("jwt");
+            Response.Cookies.Delete("jwt", new CookieOptions { 
+                HttpOnly = true,
+                SameSite = SameSiteMode.None,
+                Secure = true
+            });
             return Ok(new { message = "success" });
         }
     }

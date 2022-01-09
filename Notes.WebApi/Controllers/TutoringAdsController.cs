@@ -1,5 +1,6 @@
 ﻿using BeMyTeacher.Core;
 using BeMyTeacher.DB;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -36,7 +37,6 @@ namespace BeMyTeacher.WebApi.Controllers
         {
             return Ok(_tutoringAdsServices.GetViewModelTutoringAds(selectedSubjectId, selectedLocationId));
         }
-
 
         [HttpPost]
         public IActionResult CreateTutoringAd(TutoringAd tutoringAd)
