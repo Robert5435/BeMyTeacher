@@ -14,7 +14,7 @@ namespace BeMyTeacher.DB
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
                 optionsBuilder.UseSqlServer(
-                    @"Server=DESKTOP-I4OJB76;Database=BeMyTeacherDB;Integrated Security=True");
+                    @"Server=DESKTOP-IDVKMI3;Database=BeMyTeacherDB;Integrated Security=True");
             }
 
         

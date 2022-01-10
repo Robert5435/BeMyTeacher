@@ -15,6 +15,9 @@ using BeMyTeacher.DB;
 using AutoMapper;
 using BeMyTeacher.DB.Mapper;
 using BeMyTeacher.WebApi.Helpers;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Notes.WebApi
 {
@@ -37,6 +40,20 @@ namespace Notes.WebApi
             services.AddTransient<ISubjectsServices, SubjectsServices>();
             services.AddTransient<IUserRepository, UserServices>();
             services.AddTransient<JwtService>();
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("this is a very secure key"));
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(opt => {
+                    opt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        ValidateIssuer = false,
+                        ValidateAudience = false,
+                        IssuerSigningKey = key
+
+                    };
+                });
 
             services.AddCors();
 
@@ -68,6 +85,8 @@ namespace Notes.WebApi
             .AllowCredentials()
             .AllowAnyHeader()
             .AllowAnyMethod());
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

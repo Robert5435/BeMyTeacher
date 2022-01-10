@@ -10,3 +10,16 @@ D:\Ubuntu\Projects\notes.webapi\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.C
 D:\Ubuntu\Projects\notes.webapi\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.csproj.CopyComplete
 D:\Ubuntu\Projects\notes.webapi\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.dll
 D:\Ubuntu\Projects\notes.webapi\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.pdb
+D:\Projects\BeMyTeacher\Notes.Core\bin\Debug\netcoreapp3.1\BeMyTeacher.Core.deps.json
+D:\Projects\BeMyTeacher\Notes.Core\bin\Debug\netcoreapp3.1\BeMyTeacher.Core.dll
+D:\Projects\BeMyTeacher\Notes.Core\bin\Debug\netcoreapp3.1\BeMyTeacher.Core.pdb
+D:\Projects\BeMyTeacher\Notes.Core\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.dll
+D:\Projects\BeMyTeacher\Notes.Core\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.pdb
+D:\Projects\BeMyTeacher\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.csproj.AssemblyReference.cache
+D:\Projects\BeMyTeacher\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\BeMyTeacher\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.AssemblyInfoInputs.cache
+D:\Projects\BeMyTeacher\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.AssemblyInfo.cs
+D:\Projects\BeMyTeacher\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.csproj.CoreCompileInputs.cache
+D:\Projects\BeMyTeacher\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.csproj.CopyComplete
+D:\Projects\BeMyTeacher\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.dll
+D:\Projects\BeMyTeacher\Notes.Core\obj\Debug\netcoreapp3.1\BeMyTeacher.Core.pdb

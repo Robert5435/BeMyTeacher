@@ -10,3 +10,16 @@ D:\Ubuntu\Projects\notes.webapi\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.
 D:\Ubuntu\Projects\notes.webapi\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.dll
 D:\Ubuntu\Projects\notes.webapi\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.pdb
 D:\Ubuntu\Projects\notes.webapi\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.genruntimeconfig.cache
+D:\Projects\BeMyTeacher\Notes.DB\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.deps.json
+D:\Projects\BeMyTeacher\Notes.DB\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.runtimeconfig.json
+D:\Projects\BeMyTeacher\Notes.DB\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.runtimeconfig.dev.json
+D:\Projects\BeMyTeacher\Notes.DB\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.dll
+D:\Projects\BeMyTeacher\Notes.DB\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.pdb
+D:\Projects\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.csproj.AssemblyReference.cache
+D:\Projects\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.AssemblyInfoInputs.cache
+D:\Projects\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.AssemblyInfo.cs
+D:\Projects\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.csproj.CoreCompileInputs.cache
+D:\Projects\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.dll
+D:\Projects\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.pdb
+D:\Projects\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.genruntimeconfig.cache

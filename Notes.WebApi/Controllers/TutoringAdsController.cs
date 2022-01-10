@@ -7,6 +7,7 @@ using System;
 
 namespace BeMyTeacher.WebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class TutoringAdsController : ControllerBase
@@ -33,6 +34,7 @@ namespace BeMyTeacher.WebApi.Controllers
         //}
 
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult GetViewModelTutoringAds(int? selectedSubjectId = null, int? selectedLocationId = null)
         {
             return Ok(_tutoringAdsServices.GetViewModelTutoringAds(selectedSubjectId, selectedLocationId));
