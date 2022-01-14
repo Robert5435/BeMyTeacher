@@ -5796,19 +5796,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\robyb\\.nuget\\packages\\": {}
+    "C:\\Users\\bloo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\BeMyTeacher\\Notes.DB\\BeMyTeacher.DB.csproj",
+      "projectUniqueName": "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.DB\\BeMyTeacher.DB.csproj",
       "projectName": "BeMyTeacher.DB",
-      "projectPath": "D:\\Projects\\BeMyTeacher\\Notes.DB\\BeMyTeacher.DB.csproj",
-      "packagesPath": "C:\\Users\\robyb\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\BeMyTeacher\\Notes.DB\\obj\\",
+      "projectPath": "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.DB\\BeMyTeacher.DB.csproj",
+      "packagesPath": "C:\\Users\\bloo\\.nuget\\packages\\",
+      "outputPath": "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.DB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\robyb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bloo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5876,7 +5876,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

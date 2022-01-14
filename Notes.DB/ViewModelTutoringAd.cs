@@ -15,6 +15,7 @@ namespace BeMyTeacher.DB
         public string Content { get; set; }
         public string Subject { get; set; }
         public string Calification { get; set; }
+        public string EducationLevel { get; set; }
         public bool AvailabilityOnline { get; set; }
         public bool AvailabilityHome { get; set; }
         public bool AvailabilityStudentHome { get; set; }

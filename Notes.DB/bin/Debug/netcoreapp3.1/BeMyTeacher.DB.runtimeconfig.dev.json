@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\robyb\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\robyb\\.nuget\\packages"
+      "C:\\Users\\bloo\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\bloo\\.nuget\\packages"
     ]
   }
 }

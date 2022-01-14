@@ -134,3 +134,4 @@ D:\Projects\BeMyTeacher\Notes.WebApi\obj\Debug\netcoreapp3.1\BeMyTeacher.WebApi.
 D:\Projects\BeMyTeacher\Notes.WebApi\obj\Debug\netcoreapp3.1\BeMyTeacher.WebApi.pdb
 D:\Projects\BeMyTeacher\Notes.WebApi\obj\Debug\netcoreapp3.1\BeMyTeacher.WebApi.genruntimeconfig.cache
 D:\Projects\BeMyTeacher\Notes.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Ubuntu\Projects\notes.webapi\Notes.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

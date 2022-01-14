@@ -19,9 +19,11 @@ namespace BeMyTeacher.Core
             _mapper = mapper;
         }
 
-        public TutoringAd GetTutoringAd(int id)
+        public ViewModelTutoringAd GetTutoringAd(int id)
         {
-            return _context.TutoringAds.First(a => a.Id == id);
+            var ads = GetViewModelTutoringAds();
+            var ad = ads.First(a => a.Id == id);
+            return ad;
         }
         public List<TutoringAd> GetTutoringAds()
         {

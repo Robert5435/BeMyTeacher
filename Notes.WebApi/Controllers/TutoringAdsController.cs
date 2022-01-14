@@ -7,7 +7,6 @@ using System;
 
 namespace BeMyTeacher.WebApi.Controllers
 {
-    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class TutoringAdsController : ControllerBase

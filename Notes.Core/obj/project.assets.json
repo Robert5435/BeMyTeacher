@@ -5748,19 +5748,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\robyb\\.nuget\\packages\\": {}
+    "C:\\Users\\bloo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\BeMyTeacher\\Notes.Core\\BeMyTeacher.Core.csproj",
+      "projectUniqueName": "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.Core\\BeMyTeacher.Core.csproj",
       "projectName": "BeMyTeacher.Core",
-      "projectPath": "D:\\Projects\\BeMyTeacher\\Notes.Core\\BeMyTeacher.Core.csproj",
-      "packagesPath": "C:\\Users\\robyb\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\BeMyTeacher\\Notes.Core\\obj\\",
+      "projectPath": "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.Core\\BeMyTeacher.Core.csproj",
+      "packagesPath": "C:\\Users\\bloo\\.nuget\\packages\\",
+      "outputPath": "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\robyb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bloo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5774,8 +5774,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Projects\\BeMyTeacher\\Notes.DB\\BeMyTeacher.DB.csproj": {
-              "projectPath": "D:\\Projects\\BeMyTeacher\\Notes.DB\\BeMyTeacher.DB.csproj"
+            "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.DB\\BeMyTeacher.DB.csproj": {
+              "projectPath": "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.DB\\BeMyTeacher.DB.csproj"
             }
           }
         }
@@ -5818,7 +5818,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
