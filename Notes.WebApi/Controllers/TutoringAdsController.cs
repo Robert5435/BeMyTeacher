@@ -7,6 +7,7 @@ using System;
 
 namespace BeMyTeacher.WebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class TutoringAdsController : ControllerBase
@@ -21,6 +22,7 @@ namespace BeMyTeacher.WebApi.Controllers
         }
 
         [HttpGet("{id}", Name = "GetTutoringAd")]
+        [AllowAnonymous]
         public IActionResult GetTutoringAd(int id)
         {
             return Ok(_tutoringAdsServices.GetTutoringAd(id));
@@ -40,6 +42,7 @@ namespace BeMyTeacher.WebApi.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public IActionResult CreateTutoringAd(TutoringAd tutoringAd)
         {
 
