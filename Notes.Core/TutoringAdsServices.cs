@@ -62,11 +62,19 @@ namespace BeMyTeacher.Core
             return tutoringAd;
         }
 
-        public void DeleteTutoringAd(int id)
+        public void DeleteTutoringAd(int id, int userId)
         {
             var tutoringAd = _context.TutoringAds.First(n => n.Id == id);
-            _context.TutoringAds.Remove(tutoringAd);
-            _context.SaveChanges();
+            if(tutoringAd.UserId != userId)
+            {
+                throw new Exception("Can not delete the ad of another user");
+            }
+            else
+            {
+                _context.TutoringAds.Remove(tutoringAd);
+                _context.SaveChanges();
+            }
+
         }
 
         public void EditTutoringAd(TutoringAd tutoringAd)
@@ -91,6 +99,14 @@ namespace BeMyTeacher.Core
             editedAd.Location = tutoringAd.Location;
             editedAd.EducationLevel = tutoringAd.EducationLevel;
             _context.SaveChanges();
+        }
+
+        public List<TutoringAd> GetTutoringAdsOfUser(int userId)
+        {
+            var ads = _context.TutoringAds.ToList();
+            ads = ads.Where(ad => ad.UserId == userId).ToList();
+
+            return ads;
         }
     }
 }
