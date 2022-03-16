@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\robyb\\source\\repos\\BeMyTeacher\\Notes.Core\\BeMyTeacher.Core.csproj": {}
+    "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.Core\\BeMyTeacher.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\robyb\\source\\repos\\BeMyTeacher\\Notes.Core\\BeMyTeacher.Core.csproj": {
+    "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.Core\\BeMyTeacher.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\robyb\\source\\repos\\BeMyTeacher\\Notes.Core\\BeMyTeacher.Core.csproj",
+        "projectUniqueName": "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.Core\\BeMyTeacher.Core.csproj",
         "projectName": "BeMyTeacher.Core",
-        "projectPath": "C:\\Users\\robyb\\source\\repos\\BeMyTeacher\\Notes.Core\\BeMyTeacher.Core.csproj",
-        "packagesPath": "C:\\Users\\robyb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\robyb\\source\\repos\\BeMyTeacher\\Notes.Core\\obj\\",
+        "projectPath": "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.Core\\BeMyTeacher.Core.csproj",
+        "packagesPath": "C:\\Users\\bloo\\.nuget\\packages\\",
+        "outputPath": "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\robyb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bloo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\robyb\\source\\repos\\BeMyTeacher\\Notes.DB\\BeMyTeacher.DB.csproj": {
-                "projectPath": "C:\\Users\\robyb\\source\\repos\\BeMyTeacher\\Notes.DB\\BeMyTeacher.DB.csproj"
+              "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.DB\\BeMyTeacher.DB.csproj": {
+                "projectPath": "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.DB\\BeMyTeacher.DB.csproj"
               }
             }
           }
@@ -67,40 +67,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\robyb\\source\\repos\\BeMyTeacher\\Notes.DB\\BeMyTeacher.DB.csproj": {
+    "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.DB\\BeMyTeacher.DB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\robyb\\source\\repos\\BeMyTeacher\\Notes.DB\\BeMyTeacher.DB.csproj",
+        "projectUniqueName": "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.DB\\BeMyTeacher.DB.csproj",
         "projectName": "BeMyTeacher.DB",
-        "projectPath": "C:\\Users\\robyb\\source\\repos\\BeMyTeacher\\Notes.DB\\BeMyTeacher.DB.csproj",
-        "packagesPath": "C:\\Users\\robyb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\robyb\\source\\repos\\BeMyTeacher\\Notes.DB\\obj\\",
+        "projectPath": "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.DB\\BeMyTeacher.DB.csproj",
+        "packagesPath": "C:\\Users\\bloo\\.nuget\\packages\\",
+        "outputPath": "D:\\Ubuntu\\Projects\\notes.webapi\\Notes.DB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\robyb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bloo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -163,26 +149,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

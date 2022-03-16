@@ -30,6 +30,7 @@ namespace BeMyTeacher.WebApi.Controllers
         }
 
         [HttpGet("{id}", Name = "GetTutoringAd")]
+        [AllowAnonymous]
         public IActionResult GetTutoringAd(int id)
         {
             return Ok(_tutoringAdsServices.GetTutoringAd(id));
@@ -91,21 +92,9 @@ namespace BeMyTeacher.WebApi.Controllers
         }
 
         [HttpPut]
-        public IActionResult EditTutoringAd(TutoringAd tutoringAd)
-
+        public IActionResult EditTutoringAd([FromBody] TutoringAd tutoringAd)
         {
-            int userId;
-            try
-            {
-                var jwt = Request.Cookies["jwt"];
-                var token = _jwtService.Verify(jwt);
-                userId = int.Parse(token.Issuer);
-            }
-            catch (Exception)
-            {
-                return Unauthorized();
-            }
-            _tutoringAdsServices.EditTutoringAd(tutoringAd,userId);
+            _tutoringAdsServices.EditTutoringAd(tutoringAd);
             return Ok();
         }
 
@@ -125,7 +114,7 @@ namespace BeMyTeacher.WebApi.Controllers
             {
                 return Unauthorized();
             }
-            return Ok(_tutoringAdsServices.GetViewModelTutoringAds(userId:userId) );
+            return Ok(_tutoringAdsServices.GetTutoringAdsOfUser(userId));
         }
     }
 }
