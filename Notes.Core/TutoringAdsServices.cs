@@ -32,10 +32,15 @@ namespace BeMyTeacher.Core
             return ads;
         }
 
-        public List<ViewModelTutoringAd> GetViewModelTutoringAds(int? selectedSubjectId = null, int? selectedLocationId = null)
+        public List<ViewModelTutoringAd> GetViewModelTutoringAds(int? selectedSubjectId = null, int? selectedLocationId = null, int? userId = null)
         {
             var ads = _context.TutoringAds.Include(a => a.Calification).Include(a => a.Subject).Include(a => a.Location).Include(a => a.EducationLevel).ToList();
             ads = ads.OrderByDescending(a => a.ExpirationDate).ToList();
+            if (userId.HasValue)
+            {
+                ads = ads.Where(a => a.UserId == userId).ToList();
+            }
+
             if (selectedSubjectId.HasValue)
             {
                 ads = ads.Where(a => a.SubjectId == selectedSubjectId).ToList();
@@ -77,10 +82,10 @@ namespace BeMyTeacher.Core
 
         }
 
-        public void EditTutoringAd(TutoringAd tutoringAd)
+        public void EditTutoringAd(TutoringAd tutoringAd,int userId)
         {
             var editedAd = _context.TutoringAds.First(n => n.Id == tutoringAd.Id);
-            editedAd.UserId = tutoringAd.UserId;
+            editedAd.UserId = userId;
             editedAd.LocationId = tutoringAd.LocationId;
             editedAd.SubjectId = tutoringAd.SubjectId;
             editedAd.EducationLevelId = tutoringAd.EducationLevelId;
@@ -101,12 +106,5 @@ namespace BeMyTeacher.Core
             _context.SaveChanges();
         }
 
-        public List<TutoringAd> GetTutoringAdsOfUser(int userId)
-        {
-            var ads = _context.TutoringAds.ToList();
-            ads = ads.Where(ad => ad.UserId == userId).ToList();
-
-            return ads;
-        }
     }
 }
