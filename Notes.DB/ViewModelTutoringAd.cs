@@ -9,6 +9,8 @@ namespace BeMyTeacher.DB
         public int Id { get; set; }
         public int SubjectId { get; set; }
         public int LocationId { get; set; }
+        public int CalificationId { get; set; }
+        public int EducationLevelId { get; set; }
         public string ImageUrl { get; set; }
         public string User { get; set; }
         public string Title { get; set; }

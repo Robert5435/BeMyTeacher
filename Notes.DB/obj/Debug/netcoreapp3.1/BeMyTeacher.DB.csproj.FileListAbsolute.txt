@@ -23,3 +23,16 @@ D:\Projects\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.csproj.C
 D:\Projects\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.dll
 D:\Projects\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.pdb
 D:\Projects\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.genruntimeconfig.cache
+C:\Users\robyb\source\repos\BeMyTeacher\Notes.DB\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.deps.json
+C:\Users\robyb\source\repos\BeMyTeacher\Notes.DB\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.runtimeconfig.json
+C:\Users\robyb\source\repos\BeMyTeacher\Notes.DB\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.runtimeconfig.dev.json
+C:\Users\robyb\source\repos\BeMyTeacher\Notes.DB\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.dll
+C:\Users\robyb\source\repos\BeMyTeacher\Notes.DB\bin\Debug\netcoreapp3.1\BeMyTeacher.DB.pdb
+C:\Users\robyb\source\repos\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.csproj.AssemblyReference.cache
+C:\Users\robyb\source\repos\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\robyb\source\repos\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.AssemblyInfoInputs.cache
+C:\Users\robyb\source\repos\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.AssemblyInfo.cs
+C:\Users\robyb\source\repos\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.csproj.CoreCompileInputs.cache
+C:\Users\robyb\source\repos\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.dll
+C:\Users\robyb\source\repos\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.pdb
+C:\Users\robyb\source\repos\BeMyTeacher\Notes.DB\obj\Debug\netcoreapp3.1\BeMyTeacher.DB.genruntimeconfig.cache
