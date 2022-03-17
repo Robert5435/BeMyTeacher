@@ -85,6 +85,8 @@ namespace BeMyTeacher.Core
         public void EditTutoringAd(TutoringAd tutoringAd,int userId)
         {
             var editedAd = _context.TutoringAds.First(n => n.Id == tutoringAd.Id);
+
+            editedAd.ExpirationDate = tutoringAd.ExpirationDate;
             editedAd.UserId = userId;
             editedAd.LocationId = tutoringAd.LocationId;
             editedAd.SubjectId = tutoringAd.SubjectId;
