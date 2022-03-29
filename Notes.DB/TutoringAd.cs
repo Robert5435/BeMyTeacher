@@ -33,6 +33,7 @@ namespace BeMyTeacher.DB
         public int PricePerSession { get; set; }
 
         public int SessionLenghtinMinutes { get; set; }
+        public string PhotoPath { get; set; }
 
         public DateTime ExpirationDate { get; set; }
 
