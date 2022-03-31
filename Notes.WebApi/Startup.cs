@@ -18,6 +18,8 @@ using BeMyTeacher.WebApi.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace Notes.WebApi
 {
@@ -75,6 +77,11 @@ namespace Notes.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, "Images")),
+                RequestPath = "/Images"
+            }); 
 
             app.UseHttpsRedirection();
 
