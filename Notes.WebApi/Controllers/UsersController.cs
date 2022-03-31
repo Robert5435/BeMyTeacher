@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
 using System;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace BeMyTeacher.WebApi.Controllers
 {
@@ -14,11 +16,13 @@ namespace BeMyTeacher.WebApi.Controllers
     {
         private readonly IUserRepository _repository;
         private readonly JwtService _jwtService;
+        public IHostingEnvironment _hostingEnvironment;
 
-        public UsersController(IUserRepository repository, JwtService jwtService)
+        public UsersController(IUserRepository repository, JwtService jwtService, IHostingEnvironment hostEnv)
         {
             _repository = repository;
             _jwtService = jwtService;
+            _hostingEnvironment = hostEnv;
         }
         [HttpPost(template: "register")]
         public IActionResult Register(User user)
@@ -28,14 +32,14 @@ namespace BeMyTeacher.WebApi.Controllers
 
             return CreatedAtRoute(new { newUser.Id }, newUser);
         }
-        [HttpPost(template:"login")]
+        [HttpPost(template: "login")]
         public IActionResult Login(LoginDto dto)
         {
             var user = _repository.GetByEmail(dto.Email);
 
             if (user == null) return BadRequest(new { message = "Invalid Credentials" });
 
-            if(!BCrypt.Net.BCrypt.Verify(dto.Password, user.Password))
+            if (!BCrypt.Net.BCrypt.Verify(dto.Password, user.Password))
             {
                 return BadRequest(new { message = "Invalid Credentials" });
             }
@@ -48,10 +52,10 @@ namespace BeMyTeacher.WebApi.Controllers
                 Secure = true
             });
 
-            return Ok(new {message ="success" });
+            return Ok(new { message = "success" });
         }
 
-        [HttpGet(template:"user")]
+        [HttpGet(template: "user")]
         public IActionResult User()
         {
             try
@@ -64,20 +68,55 @@ namespace BeMyTeacher.WebApi.Controllers
                 var user = _repository.GetById(userId);
                 return Ok(user);
             }
-            catch(Exception ) 
-            { 
-                return Unauthorized(); 
+            catch (Exception)
+            {
+                return Unauthorized();
             }
         }
-        [HttpGet(template:"logout")]
+        [HttpGet(template: "logout")]
         public IActionResult Logout()
         {
-            Response.Cookies.Delete("jwt", new CookieOptions { 
+            Response.Cookies.Delete("jwt", new CookieOptions {
                 HttpOnly = true,
                 SameSite = SameSiteMode.None,
                 Secure = true
             });
             return Ok(new { message = "success" });
         }
+        [HttpPost]
+        [Route("Upload")]
+        public IActionResult Upload()
+        {
+            var path = "";
+            var newfilename = "";
+            var phoneNumber = HttpContext.Request.Form["phoneNumber"];
+            var file = HttpContext.Request.Form.Files[0];
+            if(file != null)
+            {
+                FileInfo fi = new FileInfo(file.FileName);
+                newfilename = "Image_" + DateTime.Now.TimeOfDay.Milliseconds + fi.Extension;
+                path = Path.Combine("",_hostingEnvironment.ContentRootPath+ "/Images/" + newfilename);
+                using(var stream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+
+            }
+            int userId;
+            try
+            {
+                var jwt = Request.Cookies["jwt"];
+                var token = _jwtService.Verify(jwt);
+                userId = int.Parse(token.Issuer);
+                _repository.EditUser(userId, phoneNumber, newfilename);
+            }
+            catch (Exception)
+            {
+                return Unauthorized();
+            }
+            return Ok();
+
+        }
     }
 }
+//C: \Users\robyb\source\repos\BeMyTeacher\Notes.Core\Images\

@@ -22,6 +22,14 @@ namespace BeMyTeacher.Core
             return user;
         }
 
+        public void EditUser(int id, string phoneNumber, string path)
+        {
+            var currentUser = GetById(id);
+            currentUser.PhoneNumber = phoneNumber;
+            currentUser.PhotoPath = path;
+            _context.SaveChanges();
+
+        }
 
         public User GetByEmail(string email)
         {
