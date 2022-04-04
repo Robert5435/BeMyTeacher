@@ -89,7 +89,7 @@ namespace BeMyTeacher.WebApi.Controllers
         {
             var path = "";
             var newfilename = "";
-            var phoneNumber = HttpContext.Request.Form["phoneNumber"];
+            var phoneNumber = HttpContext.Request.Form["phNumber"];
             var file = HttpContext.Request.Form.Files[0];
             if(file != null)
             {
