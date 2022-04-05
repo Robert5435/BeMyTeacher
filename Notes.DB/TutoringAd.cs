@@ -44,5 +44,6 @@ namespace BeMyTeacher.DB
         public Location Location { get; set; }
 
         public EducationLevel EducationLevel { get; set; }
+        public User User { get; set; }
     }
 }

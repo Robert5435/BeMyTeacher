@@ -12,7 +12,8 @@ namespace BeMyTeacher.DB
         public int CalificationId { get; set; }
         public int EducationLevelId { get; set; }
         public string PhotoPath { get; set; }
-        public string User { get; set; }
+        public int UserId { get; set; }
+        public string Username { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
         public string Subject { get; set; }
