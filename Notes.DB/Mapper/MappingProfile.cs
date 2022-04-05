@@ -14,7 +14,7 @@ namespace BeMyTeacher.DB.Mapper
                 .ForMember(dest => dest.Calification, opt => opt.MapFrom(src => src.Calification.Name))
                 .ForMember(dest => dest.Subject, opt => opt.MapFrom(src => src.Subject.Name))
                 .ForMember(dest => dest.EducationLevel, opt => opt.MapFrom(src => src.EducationLevel.Name))
-                .ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.Location.Name));
+                .ForMember(dest => dest.Username, opt => opt.MapFrom(src => src.User.Name));
         }
     }
 }
