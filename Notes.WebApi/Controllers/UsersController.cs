@@ -116,6 +116,22 @@ namespace BeMyTeacher.WebApi.Controllers
             return Ok();
 
         }
+        [HttpPost]
+        [Route("Rate")]
+        public IActionResult Rate(int rating, int ratingCounter)
+        {
+            try
+            {
+                var jwt = Request.Cookies["jwt"];
+                var token = _jwtService.Verify(jwt);
+                var userId = int.Parse(token.Issuer);
+            }
+            catch (Exception)
+            {
+                return Unauthorized();
+            }
+            return Ok();
+        }
     }
 }
 //C: \Users\robyb\source\repos\BeMyTeacher\Notes.Core\Images\
