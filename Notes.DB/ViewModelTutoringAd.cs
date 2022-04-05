@@ -11,7 +11,7 @@ namespace BeMyTeacher.DB
         public int LocationId { get; set; }
         public int CalificationId { get; set; }
         public int EducationLevelId { get; set; }
-        public string ImageUrl { get; set; }
+        public string PhotoPath { get; set; }
         public string User { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }

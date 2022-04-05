@@ -100,7 +100,6 @@ namespace BeMyTeacher.WebApi.Controllers
                 {
                     file.CopyTo(stream);
                 }
-
             }
             int userId;
             try

@@ -2,9 +2,13 @@
 using BeMyTeacher.DB;
 using BeMyTeacher.WebApi.Helpers;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
+using System.IO;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace BeMyTeacher.WebApi.Controllers
 {
@@ -16,17 +20,20 @@ namespace BeMyTeacher.WebApi.Controllers
         private ITutoringAdsServices _tutoringAdsServices;
         private readonly IUserRepository _repository;
         private readonly JwtService _jwtService;
+        public IHostingEnvironment _hostingEnvironment;
 
         public TutoringAdsController(
             ILogger<TutoringAdsController> logger, 
             ITutoringAdsServices tutoringAdsServices,
             IUserRepository repository, 
-            JwtService jwtService)
+            JwtService jwtService,
+            IHostingEnvironment hostEnv)
         {
             _logger = logger;
             _tutoringAdsServices = tutoringAdsServices;
             _repository = repository;
             _jwtService = jwtService;
+            _hostingEnvironment = hostEnv;  
         }
 
         [HttpGet("{id}", Name = "GetTutoringAd")]
@@ -49,10 +56,32 @@ namespace BeMyTeacher.WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateTutoringAd(TutoringAd tutoringAd)
+        public IActionResult CreateTutoringAd()
         {
+            var path = "";
+            var newfilename = "";
+            var tutoringAdFormData = HttpContext.Request.Form["tutoringAd"];
+            var file = HttpContext.Request.Form.Files[0];
+            TutoringAd tutoringAd = JsonSerializer.Deserialize<TutoringAd>(tutoringAdFormData);
+
+
+            if (file != null)
+            {
+                FileInfo fi = new FileInfo(file.FileName);
+                newfilename = "Image_" + DateTime.Now.TimeOfDay.Milliseconds + fi.Extension;
+                path = Path.Combine("", _hostingEnvironment.ContentRootPath + "/Images/" + newfilename);
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+
+            }
+
 
             tutoringAd.ExpirationDate = DateTime.Now;
+            tutoringAd.PhotoPath = newfilename;
+
+
             try
             {
                 var jwt = Request.Cookies["jwt"];
