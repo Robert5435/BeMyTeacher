@@ -34,7 +34,7 @@ namespace BeMyTeacher.Core
 
         public List<ViewModelTutoringAd> GetViewModelTutoringAds(int? selectedSubjectId = null, int? selectedLocationId = null, int? userId = null)
         {
-            var ads = _context.TutoringAds.Include(a => a.Calification).Include(a => a.Subject).Include(a => a.Location).Include(a => a.EducationLevel).ToList();
+            var ads = _context.TutoringAds.Include(a => a.Calification).Include(a => a.Subject).Include(a => a.Location).Include(a => a.EducationLevel).Include(a => a.User).ToList();
             ads = ads.OrderByDescending(a => a.ExpirationDate).ToList();
             if (userId.HasValue)
             {
