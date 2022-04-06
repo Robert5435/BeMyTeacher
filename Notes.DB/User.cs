@@ -13,6 +13,8 @@ namespace BeMyTeacher.DB
         public string Password { get; set; }
         public string PhotoPath { get; set; }
         public string PhoneNumber { get; set; }
-        public string Rating { get; set; }  
+        public string Rating { get; set; }
+        public int RatingCounter { get; set; }
+        public int RatingUser { get; set; }
     }
 }

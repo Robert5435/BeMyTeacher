@@ -14,6 +14,8 @@ namespace BeMyTeacher.DB
         public string PhotoPath { get; set; }
         public int UserId { get; set; }
         public string Username { get; set; }
+        public int RatingCounter { get; set; }
+        public int RatingUser { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
         public string Subject { get; set; }

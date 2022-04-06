@@ -11,5 +11,6 @@ namespace BeMyTeacher.Core
         User GetByEmail(string email);
         User GetById(int id);
         void EditUser(int id,string phoneNumber, string path);
+        void RateUser(int id, int rate);
     }
 }

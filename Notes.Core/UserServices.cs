@@ -40,5 +40,22 @@ namespace BeMyTeacher.Core
         {
             return _context.Users.FirstOrDefault(u => u.Id == id);
         }
+
+        public void RateUser(int id, int ratingGiven)
+        {
+            var userToBeRated = GetById(id);
+            int userRating = userToBeRated.RatingUser;
+            int counter = userToBeRated.RatingCounter;
+            userToBeRated.RatingCounter = (counter + 1);
+            if(userToBeRated.RatingCounter < 2)
+            {
+                userToBeRated.RatingUser = ratingGiven;
+                _context.SaveChanges();
+            }
+            else { 
+                userToBeRated.RatingUser = (userRating + ratingGiven) / 2;
+                _context.SaveChanges();
+            }
+        }
     }
 }

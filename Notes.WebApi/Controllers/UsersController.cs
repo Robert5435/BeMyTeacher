@@ -118,13 +118,17 @@ namespace BeMyTeacher.WebApi.Controllers
         }
         [HttpPost]
         [Route("Rate")]
-        public IActionResult Rate(int rating, int ratingCounter)
+        public IActionResult Rate()
         {
+            var ratingValue = HttpContext.Request.Form["rating"];
+            var userToBeRated = HttpContext.Request.Form["userId"];
+
             try
             {
                 var jwt = Request.Cookies["jwt"];
                 var token = _jwtService.Verify(jwt);
                 var userId = int.Parse(token.Issuer);
+                _repository.RateUser(Int32.Parse(userToBeRated), Int32.Parse(ratingValue));
             }
             catch (Exception)
             {
