@@ -29,5 +29,12 @@ namespace BeMyTeacher.WebApi.Controllers
         {
             return Ok(_subjectServices.GetSubjects());
         }
+
+        [HttpDelete]
+        public IActionResult DeleteSubject(int id)
+        {
+            _subjectServices.DeleteSubjects(id);
+            return Ok();
+        }
     }
 }

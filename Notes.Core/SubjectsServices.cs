@@ -11,12 +11,23 @@ namespace BeMyTeacher.Core
     public class SubjectsServices : ISubjectsServices
     {
         private AppDbContext _context;
-        private readonly IMapper _mapper;
-
-        public SubjectsServices(AppDbContext context, IMapper mapper)
+        public SubjectsServices(AppDbContext context)
         {
             _context = context;
-            _mapper = mapper;
+        }
+
+        public void CreateSubject(string name)
+        {
+            var subject = new Subject { Name = name };
+            _context.Add(subject);
+            _context.SaveChanges();
+        }
+
+        public void DeleteSubjects(int id)
+        {
+            var subject = _context.Subjects.First(a => a.Id == id);
+            _context.Remove(subject);
+            _context.SaveChanges();
         }
 
         public Subject GetSubject(int id)

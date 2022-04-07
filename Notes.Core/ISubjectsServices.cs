@@ -9,5 +9,7 @@ namespace BeMyTeacher.Core
     {
         Subject GetSubject(int id);
         List<Subject> GetSubjects();
+        void CreateSubject(string name);
+        void DeleteSubjects(int id);
     }
 }
