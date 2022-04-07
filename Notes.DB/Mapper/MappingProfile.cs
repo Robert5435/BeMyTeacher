@@ -16,7 +16,9 @@ namespace BeMyTeacher.DB.Mapper
                 .ForMember(dest => dest.EducationLevel, opt => opt.MapFrom(src => src.EducationLevel.Name))
                 .ForMember(dest => dest.Username, opt => opt.MapFrom(src => src.User.Name))
                 .ForMember(dest => dest.RatingUser, opt => opt.MapFrom(src => src.User.RatingUser))
-                .ForMember(dest => dest.RatingCounter, opt => opt.MapFrom(src => src.User.RatingCounter));
+                .ForMember(dest => dest.RatingCounter, opt => opt.MapFrom(src => src.User.RatingCounter))
+                .ForMember(dest => dest.UserPhoto, opt => opt.MapFrom(src => src.User.PhotoPath));
+
 
 
         }

@@ -16,9 +16,8 @@ namespace BeMyTeacher.Core
             _context = context;
         }
 
-        public void CreateSubject(string name)
+        public void CreateSubject(Subject subject)
         {
-            var subject = new Subject { Name = name };
             _context.Add(subject);
             _context.SaveChanges();
         }
